@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Bot</title>
+    </head>
+    <body>
+        {% for Crypto in Cryptos %}
+            {{ Crypto.id }}
+            {{ Crypto.symbol }}
+            {{ Crypto.name }}
+            {{ Crypto.name2 }}
+        {% endfor %}
+    </body>
+</html>

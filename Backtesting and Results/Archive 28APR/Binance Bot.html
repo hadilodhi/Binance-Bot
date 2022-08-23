@@ -1,0 +1,23 @@
+<html>
+<title>Binance Bot</title>
+
+<body>
+    <h1>Binance Response</h1>
+    <div id="response"></div>
+    <script>
+        var burl = "https://api.binance.com"
+        var query = "/api/v3/klines"
+        query += "?symbol=BTCUSDT&interval=30m&limit=600"
+        var url = burl + query
+        var request = new XMLHttpRequest()
+        var responsediv = document.getElementById('response')
+    
+        request.open("GET", url, true)
+        request.onload = function () {
+            var response = request.responseText
+            responsediv.append(response)
+        }
+        request.send()
+    </script>
+</body>
+</html>
